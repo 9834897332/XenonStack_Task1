@@ -131,7 +131,7 @@ const toFav = asynceHandler(async (req, res) => {
     }
 });
 
-const getAllFav = asynceHandler(async (req, res) => {
+const getAllFavorites = asynceHandler(async (req, res) => {
     const {email} = req.body;
     try {
         const user = await prisma.user.findUnique({
@@ -144,4 +144,4 @@ const getAllFav = asynceHandler(async (req, res) => {
     }
 });
 
-export {createUser,bookVisit,getAllBookings ,cancelBooking ,toFav , getAllFav};
+export {createUser,bookVisit,getAllBookings ,cancelBooking ,toFav , getAllFavorites};
